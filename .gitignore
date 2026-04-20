@@ -1,0 +1,106 @@
+# ============================================
+# Qt / qmake 构建产物
+# ============================================
+# 自动生成的 Makefile
+Makefile
+Makefile.Debug
+Makefile.Release
+CLAUDE.md
+
+# 构建输出目录
+/build/
+/build-*/
+/debug/
+/release/
+/bin/
+/obj/
+
+# ============================================
+# 编译中间文件 (Windows MSVC / MinGW)
+# ============================================
+*.obj
+*.o
+*.exe
+*.dll
+*.lib
+*.a
+*.pdb
+*.ilk
+*.idb
+*.exp
+*.manifest
+*.res
+
+# ============================================
+# Qt 元对象编译器 (moc) 与 UI 编译器 (uic) 生成文件
+# ============================================
+moc_*.cpp
+moc_*.h
+ui_*.h
+qrc_*.cpp
+*.qm
+
+# ============================================
+# IDE / 编辑器配置 (不应上传个人环境配置)
+# ============================================
+# Visual Studio
+.vs/
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.sln
+
+# VS Code
+.vscode/
+
+# Qt Creator 用户特定配置
+*.pro.user
+*.pro.user.*
+*.qbs.user
+*.qbs.user.*
+*.qmlproject.user
+*.qmlproject.user.*
+*.autosave
+
+# CLion / JetBrains
+.idea/
+cmake-build-*/
+
+# ============================================
+# 操作系统文件
+# ============================================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ============================================
+# 部署相关的 Qt 运行时库 (不应上传到版本控制)
+# ============================================
+# 这些 DLL 应通过 Qt 官方安装包或 windeployqt 获取
+Qt5*.dll
+Qt6*.dll
+libEGL.dll
+libGLESv2.dll
+opengl32sw.dll
+d3dcompiler_47.dll
+vc_redist.*.exe
+
+# ICU 库 (Qt5 依赖)
+icudt*.dll
+icuin*.dll
+icuuc*.dll
+
+# Qt 插件目录 (部署时生成)
+iconengines/
+imageformats/
+platforms/
+translations/
+styles/
+
+# ============================================
+# 日志与临时文件
+# ============================================
+*.log
+*.tmp
+*.temp
+*~
