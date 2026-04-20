@@ -2,7 +2,7 @@
 
 一个基于 **C++11** 与 **Qt5 Widgets** 构建的简易图形界面计算器，适合作为 Qt 入门学习项目或 GUI 编程教学案例。
 
-<img src="../../../Downloads/Typora_img/calculator.png" alt="计算器Qt界面" style="zoom:67%;" />
+<img src="calculator.png" alt="计算器Qt界面" style="zoom:67%;" />
 
 
 ---
