@@ -1,13 +1,24 @@
 # Qt Simple Calculator
 
-一个基于 **C++11** 与 **Qt5 Widgets** 构建的简易图形界面计算器，适合作为 Qt 入门学习项目或 GUI 编程教学案例。
+> 一个基于 **C++11** 与 **Qt5 Widgets** 构建的简易图形界面计算器，适合作为 Qt 入门学习项目或 GUI 编程教学案例。
 
-<img src="calculator.png" alt="计算器Qt界面" style="zoom:67%;" />
+---
+
+## 目录
+
+- [核心功能](#核心功能)
+- [截图预览](#截图预览)
+- [技术栈](#技术栈)
+- [项目结构](#项目结构)
+- [环境依赖与编译指南](#环境依赖与编译指南)
+- [使用说明](#使用说明)
+- [设计亮点](#设计亮点)
+- [许可证](#许可证)
 
 
 ---
 
-## 功能特性
+## 核心功能
 
 - **整数四则运算**：支持 `+`、`-`、`*`、`/` 及括号 `()` 的混合表达式计算
 - **一元负号**：支持负数输入，如 `-5 + 3` 或 `(-3) * 4`
@@ -17,6 +28,14 @@
 - **QSS 样式美化**：使用 Qt Style Sheets 实现现代化按钮与输入框视觉效果
 
 ---
+
+## 截图预览
+
+<div align="center">
+  <img src="calculator.png" width="30%">
+</div>
+
+-----
 
 ## 技术栈
 
@@ -31,7 +50,8 @@
 ## 项目结构
 
 ```
-.
+qt-calculator/
+|
 ├── main.cpp              # 程序入口
 ├── widget.h / widget.cpp # 主窗口 UI 与交互逻辑
 ├── calculatorlogic.h /   # 计算引擎（表达式解析与求值）
@@ -44,11 +64,11 @@
 
 - **`Widget`**：负责 UI 渲染、按钮信号槽绑定、键盘事件捕获与结果显示
 - **`CalculatorLogic`**：独立的计算引擎，基于双栈（操作数栈 + 运算符栈）实现中缀表达式求值（类 Shunting-yard 算法）
-- **两者通过 `CalculatorLogic::Result` 结构体通信**，UI 层不直接参与任何数值计算
+- 两者通过 **`CalculatorLogic::Result`** 结构体通信，UI 层不直接参与任何数值计算
 
 ---
 
-## 构建与运行
+## 环境依赖与编译指南
 
 ### 前置条件
 
@@ -99,23 +119,37 @@ release/calculator.exe  # Windows
 
 ---
 
-## 设计亮点与学习价值
+## 设计亮点
 
 1. **异常安全**：计算引擎对栈操作、字符串解析、除零等边界情况做了完整保护，程序不会因错误输入而崩溃
 2. **解耦设计**：计算逻辑完全独立于 UI，方便后续替换为更复杂的解析器（如支持科学计算、变量等）
 3. **Qt 信号槽机制**：展示了 `connect()` 手动绑定与 `keyPressEvent` 事件处理的典型用法
 4. **QSS 样式应用**：通过 `setStyleSheet()` 实现轻量级 UI 美化，无需额外图片资源
 
----
-
-## 贡献
-
-欢迎提交 Issue 或 Pull Request！
-
-由于本项目定位为教学示例，建议保持代码简洁、注释清晰，避免引入过于复杂的第三方依赖。
-
----
+----
 
 ## 许可证
 
-本项目采用 [MIT License](LICENSE) 开源协议，可自由学习、修改与复用。
+本项目基于 [MIT License](LICENSE) 开源，你可以自由学习、修改和分发。
+
+```
+MIT License
+
+Copyright (c) 2026 Tianxiang Li
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+```
+
+---
+
+> 如果你在学习过程中有任何问题，欢迎提交 [Issue](https://github.com/[YourUsername]/MusicPlayer4/issues) 或 [Pull Request](https://github.com/[YourUsername]/MusicPlayer4/pulls)。祝你学习愉快！
+>
+> ⭐ 如果这个项目对你有帮助，欢迎 Star 支持！
